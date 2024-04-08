@@ -998,3 +998,4 @@ INSERT INTO users (first_name, last_name, joined_at) VALUES ('Dante', 'Hardy', '
 INSERT INTO users (first_name, last_name, joined_at) VALUES ('Caroline', 'Castro', '2022-12-19 00:23:39.761169');
 INSERT INTO users (first_name, last_name, joined_at) VALUES ('Terrell', 'Randolph', '2022-12-14 08:23:39.761172');
 INSERT INTO users (first_name, last_name, joined_at) VALUES ('Rory', 'Powers', '2023-01-18 07:23:39.761179');
+INSERT INTO users (first_name, last_name, joined_at) VALUES ('Alice', 'Smith', '2024-04-08 12:00:00');
