@@ -11,13 +11,13 @@ phases:
       - echo Starting build at `date`
       # Build application Docker image
       - echo Building the application Docker image...
-      - cd /analytics
+      - cd $CODEBUILD_SRC_DIR/analytics
       - docker build -t $APP_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER .
       - docker tag $APP_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$APP_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER
 
       # Build the database Docker image
       - echo Building the database Docker image...
-      - cd /db
+      - cd $CODEBUILD_SRC_DIR/db
       - docker build -t $DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER .
       - docker tag $DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER
 
