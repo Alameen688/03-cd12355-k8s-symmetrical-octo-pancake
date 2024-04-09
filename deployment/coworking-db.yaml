@@ -19,15 +19,16 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: gp2
+  storageClassName: manual
   hostPath:
     path: "/mnt/data"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: postgresql-pvc
+  name: postgresql-pv-claim
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
@@ -74,4 +75,4 @@ spec:
 #       volumes:
 #       - name: postgresql-storage
 #         persistentVolumeClaim:
-#           claimName: postgresql-pvc
+#           claimName: postgresql-pv-claim
