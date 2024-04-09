@@ -9,12 +9,6 @@ phases:
   build:
     commands:
       - echo Starting build at `date`
-      # Build the database Docker image
-      - echo Building the database Docker image...
-      - cd $CODEBUILD_SRC_DIR/db
-      - docker build -t $DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER .
-      - docker tag $DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER
-
       # Build application Docker image
       - echo Building the application Docker image...
       - cd $CODEBUILD_SRC_DIR/analytics
@@ -24,10 +18,6 @@ phases:
   post_build:
     commands:
       - echo Completed build at `date`
-      # Pushing the database Docker image
-      - echo Pushing the database Docker image...
-      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$DB_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER
-
       # Pushing the application Docker image
       - echo Pushing the application Docker image...
       - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$APP_IMAGE_NAME:$CODEBUILD_BUILD_NUMBER
