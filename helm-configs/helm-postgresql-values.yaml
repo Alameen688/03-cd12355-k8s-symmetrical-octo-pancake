@@ -1,0 +1,3 @@
+primary:
+  persistence:
+    existingClaim: postgresql-pvc
