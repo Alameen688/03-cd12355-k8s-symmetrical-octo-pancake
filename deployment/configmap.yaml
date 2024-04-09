@@ -4,7 +4,7 @@ metadata:
   name: db-configmap
 data:
   DB_NAME: postgres
-  DB_USER: postgres
+  DB_USERNAME: postgres
   DB_HOST: 'postgresql-service.default.svc.cluster.local'
   DB_PORT: '5432'
 ---
@@ -14,4 +14,4 @@ metadata:
   name: db-secret
 type: Opaque
 data:
-  DB_PASS: eGg2MkM2Z0REUQ==
+  DB_PASSWORD: eGg2MkM2Z0REUQ==

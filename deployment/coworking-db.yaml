@@ -60,12 +60,12 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: db-configmap
-              key: DB_USER
+              key: DB_USERNAME
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:
               name: db-secret
-              key: DB_PASS
+              key: DB_PASSWORD
         ports:
         - containerPort: 5432
         volumeMounts:
