@@ -1,4 +1,4 @@
-# Coworking Space Service Extension
+# Co-working Space Service
 
 The Coworking Space Service is a set of APIs that enables users to request one-time tokens and administrators to authorize access to a coworking space. This service follows a microservice pattern and the APIs are split into distinct services that can be deployed and managed independently of one another.
 
@@ -104,7 +104,7 @@ kubectl apply -f deployment/
 export POSTGRES_PASSWORD=$(kubectl get secret --namespace default coworking-postgresql-db -o jsonpath="{.data.postgres-password}" | base64 -d)
 ```
 
-#### Connect to your database from outside the cluster 
+#### Connect to the database from outside the cluster 
 
 ```bash
 kubectl port-forward --namespace default svc/coworking-postgresql-db 5432:5432 &
