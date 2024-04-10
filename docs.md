@@ -4,7 +4,7 @@ The Coworking Space guide
 
 ## Release docker application image
 
-To release a new version fo the docker image:
+To release a new version for the docker image:
 
 ### Trigger docker image build
 
