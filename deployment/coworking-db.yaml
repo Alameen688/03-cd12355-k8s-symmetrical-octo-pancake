@@ -10,7 +10,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: gp2
   hostPath:
-    path: "/bitnami/postgresql/data"
+    path: "mnt/data"
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

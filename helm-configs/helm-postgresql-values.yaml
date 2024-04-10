@@ -1,3 +1,4 @@
 primary:
   persistence:
     existingClaim: postgresql-pvc
+postgresqlDataDir: "mnt/data"
