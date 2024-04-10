@@ -10,4 +10,4 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: gp2
   hostPath:
-    path: "mnt/data"
+    path: "/mnt/data"
