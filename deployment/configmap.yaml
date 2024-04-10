@@ -5,7 +5,7 @@ metadata:
 data:
   DB_NAME: postgres
   DB_USERNAME: postgres
-  DB_HOST: 'postgresql-service.default.svc.cluster.local'
+  DB_HOST: 'coworking-postgresql-db.default.svc.cluster.local'
   DB_PORT: '5432'
 ---
 apiVersion: v1
